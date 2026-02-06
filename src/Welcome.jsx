@@ -77,7 +77,7 @@ function Welcome() {
     
     // 2. Log and Redirect
     console.log('Profile Saved:', profileData);
-    navigate('/wallet'); 
+    navigate('/dashboard'); 
   };
 
   return (

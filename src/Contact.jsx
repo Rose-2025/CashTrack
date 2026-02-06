@@ -11,7 +11,7 @@ function Contact() {
             </p>
                 </div>
         <button
-            onClick={() => navigate('/next')}
+            onClick={() => navigate('/dashboard')}
             style={{ backgroundColor: 'blue', color: 'white', padding: '10px', borderRadius:'8px', border:'2px solid black', cursor:'pointer'}}>
                 
                     Start tracking for free

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import styles from "./Navigation.module.css";
 
 const Navigation = () => {
+  const [isOpen, setIsOpen] = useState(true);
   const location = useLocation();
 
   const isActive = (path) => {
@@ -10,10 +11,17 @@ const Navigation = () => {
   };
 
   return (
-    <nav className={styles.navigation}>
+    <nav className={`${styles.navigation} ${isOpen ? "" : styles.closed}`}>
+      <button
+        className={styles.toggleBtn}
+        onClick={() => setIsOpen(!isOpen)}
+        title={isOpen ? "Hide Navigation" : "Show Navigation"}
+      >
+        {isOpen ? "▼" : "▲"}
+      </button>
       <Link
-        to="/"
-        className={`${styles.navItem} ${isActive("/") ? styles.active : ""}`}
+        to="/dashboard"
+        className={`${styles.navItem} ${isActive("/dashboard") ? styles.active : ""}`}
         title="Dashboard"
       >
         <span className={styles.icon}>📊</span>
