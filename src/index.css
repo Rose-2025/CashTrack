@@ -1,0 +1,54 @@
+:root {
+  /* CashTrack Brand Colors */
+  --primary-green: #022C22;
+  --accent-gold: #D4AF37;
+  --text-cream: #F3E5AB;
+  --white: #ffffff;
+}
+
+body {
+  background-color: var(--primary-green);
+  color: var(--text-cream);
+  font-family: sans-serif;
+  margin: 0;
+  padding: 20px; 
+  text-align: center;
+}
+
+.button-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 12px 24px;
+  width: 250px;
+  margin: 10px auto; 
+  border-radius: 25px;
+  border: 2px solid var(--accent-gold); 
+  background-color: var(--white);
+  color: var(--primary-green); 
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.button-style:hover {
+  background-color: var(--text-cream);
+  transform: scale(1.05); 
+}
+
+.login-input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid var(--accent-gold);
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  outline: none;
+}
+.about-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px
+}
+
+
